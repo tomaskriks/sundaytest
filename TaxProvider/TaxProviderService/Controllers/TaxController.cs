@@ -41,21 +41,6 @@ namespace TaxProviderService.Controllers
         }
 
 
-       // GET: api/Tax/5
-        [HttpGet]
-        public string Get(int id)
-        {
-            string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string path = (System.IO.Path.GetDirectoryName(executable));
-
-
-            string Path = Environment.CurrentDirectory;
-            string[] appPath = Path.Split(new string[] { "bin" }, StringSplitOptions.None);
-
-            return path + "\r\n" + appPath[0];
-        }
-    
-
         // POST: api/Tax   //Insert
         [HttpPost]
         public void PostTaxRecord([FromBody]Tax value)
